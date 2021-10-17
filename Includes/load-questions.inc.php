@@ -12,7 +12,7 @@ if ($resultCheck > 8) {
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<div class='question-holder'>
         <div class='q-header'>
-            <p><span id = 'uid'>USER: ".$row['q_uid']."</span><span id = 'sub'>SUBJECT: ".$row['q_sub']."</span></p>
+            <p><span id = 'uid'>USER: ".$row['q_user']."</span><span id = 'sub'>SUBJECT: ".$row['q_sub']."</span></p>
         </div>
         <div class='q-content'>
             <h6 id = 'question'>QUESTION: ".$row['q_question']."</h6>

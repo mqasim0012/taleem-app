@@ -13,8 +13,8 @@
 
 <div class='qcontainer'>
 <?php
-    if (isset($_SESSION['userUid'])) {
-    $username = $_SESSION['userUid'];
+    if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
     echo "<div class = 'q-header'>
         <p id = 'interaction-identifier'>POSTING AS ".$username."</p>
     </div> <div class='question'>
@@ -60,7 +60,7 @@
           <button type = 'submit' name = 'submit-question'>Post</button>
           </form></div>";
     } else {
-    echo "<p>Please <a id = 'qtologin' href = '../Index.php#login'><u>log in</u></a> to your jt taleem account to create a post.</p>";
+    echo "<p>Please <a id = 'qtologin' href = '../index.php#login'><u>log in</u></a> to your jt taleem account to create a post.</p>";
     }
     ?>
 </div>
@@ -74,7 +74,7 @@
         if ($resultCheck > 0) {
             $num = 0;
             while($row = mysqli_fetch_assoc($result)) {
-                $poster = $row['q_uid'];
+                $poster = $row['q_user'];
                 $id = $row['q_id'];
                 echo "<div class='question-holder'>
                 <div class='q-header'>
@@ -99,7 +99,7 @@
                     echo "<div class = 'r_container' id = 'r_num".$num."'>";
                     while ($row1 = mysqli_fetch_assoc($result1)) {
                         echo "
-                        <p id = 'r_content'><span id = 'r_uid'><u>".$row1['r_uid']."</u></span><br><span id = 'r_text'>".$row1['r_text']."</span></p><br>";
+                        <p id = 'r_content'><span id = 'r_uid'><u>".$row1['r_user']."</u></span><br><span id = 'r_text'>".$row1['r_text']."</span></p><br>";
                     }
                     echo "<script>";
                     echo "function reveal".$num."Replies() {

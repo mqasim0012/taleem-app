@@ -1,0 +1,19 @@
+The database is managed on phpMyAdmin
+The database is in MySQLi
+
+DATABASE NAME: jtTaleem
+    TABLES:
+        Discussion Form:
+            CREATE TABLE questions (
+	            q_id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+                q_user varchar(256) NOT NULL,
+                q_sub varchar(256) NOT NULL,
+                q_question LONGTEXT NOT NULL,
+                q_details LONGTEXT NOT NULL
+            );
+            CREATE TABLE replies (
+                r_id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+                parent_id int(11) NOT NULL,
+                r_user varchar(256) NOT NULL,
+                r_text LONGTEXT NOT NULL
+            );

@@ -23,7 +23,7 @@
 	<header>
 		<div class = "main">
 			<div class = "logo">
-				<img src = "Images/logo.png" />
+				<img src = "logo.png" />
 			</div>
 			<a class = 'menu-icon'><img src="Images/menu.png" alt=""></a>
 			<ul>
@@ -32,7 +32,7 @@
 				<li><a href = "Discussion/Discussion_bounds.php">Discussion</a></li>
 				<?php
 				if (isset($_SESSION['userId'])) {
-					echo '<li><form action = "includes/logout.inc.php" method = "post"><a class = \'logout\' href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
+					echo '<li><form action = "Includes/logout.inc.php" method = "post"><a class = \'logout\' href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
 				} else {
 					echo '<li><a class = "login">Log-In/Sign-Up</a></li>';
 				}
@@ -49,8 +49,8 @@
       }'>TALEEM</h1>
 				<?php
 				if (isset($_SESSION['userId'])) {
-					echo '<p id = "welcome">Welcome '.$_SESSION['userUid'].'!</p><br />';
-					echo '<a href = "#!" class = "loggedin">Account Settings</a>';
+					echo '<p id = "welcome">Welcome '.$_SESSION['username'].'!</p><br />';
+					echo '<a href = "account-settings.php" class = "loggedin">Account Settings</a>';
 				}
 				?>
 			</div>

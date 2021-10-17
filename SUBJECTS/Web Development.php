@@ -27,14 +27,14 @@
 		<img src = "../Images/logo.png" />
 	</div>
 	<ul>
-		<li class = "cool-link"><a href = "../Index.php" class = "home">Home</a></li>
+		<li class = "cool-link"><a href = "../index.php" class = "home">Home</a></li>
 		<li class = "cool-link"><a href = "../Dashboard.php" class = "active">Dashboard</a></li>
 		<li class = "cool-link"><a href = "../Discussion/Discussion_bounds.php" class = "discussion">Discussion</a></li>
 		<?php
 		if (isset($_SESSION['userId'])) {
 			echo '<li class = "cool-link"><form action = "../Includes/logout.inc.php" method = "post"><a href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
 		} else {
-			echo '<li class = "cool-link"><a href = "../Index.php#login" class = "login">Log-In/Sign-Up</a></li>';
+			echo '<li class = "cool-link"><a href = "../index.php#login" class = "login">Log-In/Sign-Up</a></li>';
 		}
 		?>
 	    </ul>

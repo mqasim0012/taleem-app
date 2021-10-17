@@ -23,9 +23,10 @@ if (isset($_POST['signup-submit'])) {
 		header("Location: ../index.php?error=invaliduid&mail=".$email);
 		exit();
 	} else {
-		$sql = "SELECT uidUsers FROM users WHERE uidUsers=?";
+		$sql = "SELECT userId FROM users WHERE username=?";
 		$stmt = mysqli_stmt_init($conn);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
+			error_log(mysqli_error($stmt));
 			header("Location: ../index.php?error=sqlerror");
 			exit();
 		} else {
@@ -36,13 +37,14 @@ if (isset($_POST['signup-submit'])) {
 			if ($resultCheck > 0) {
 				header("Location: ../index.php?error=usertaken&mail=".$email);
 				exit();
-			} elseif($password !== $passwordRepeat) {
+			} elseif($password != $passwordRepeat) {
 				header("Location: ../index.php?error=passwordcheck&uid=".$username."&mail".$email);
 				exit();
 			} else {
-				$sql = "INSERT INTO users (uidUsers, emailUsers, pswdUsers) VALUES (?, ?, ?)";
+				$sql = "INSERT INTO users (username, userEmail, userPwd) VALUES (?, ?, ?)";
 				$stmt = mysqli_stmt_init($conn);
 				if (!mysqli_stmt_prepare($stmt, $sql)) {
+					error_log(mysqli_error($conn));
 					header("Location: ../index.php?error=sqlerror");
 					exit();
 				} else {

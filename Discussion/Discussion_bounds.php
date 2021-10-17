@@ -23,7 +23,7 @@
 <header>
 	<div class = "main">
 	<div class = "logo">
-		<img src = "../Images/logo.png" />
+		<img src = "../logo.png" />
 	</div>
 	<a class = 'menu-icon'><img src="../Images/menu.png" alt=""></a>
 	<ul>
@@ -34,7 +34,7 @@
 		if (isset($_SESSION['userId'])) {
 			echo '<li class = "cool-link"><form action = "../Includes/logout.inc.php" method = "post"><a href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
 		} else {
-			echo '<li class = "cool-link"><a href = "../Index.php#login" class = "login">Log-In/Sign-Up</a></li>';
+			echo '<li class = "cool-link"><a href = "../index.php#login" class = "login">Log-In/Sign-Up</a></li>';
 		}
 		?>
 	    </ul>
@@ -57,10 +57,10 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-<script src="JS/Max.js"></script>
-<script src="JS/ScrollTo.js"></script>
-<script src="JS/Ease.js"></script>
-<script src="JS/animate-scroll.js"></script>
+<script src="../JS/Max.js"></script>
+<script src="../JS/ScrollTo.js"></script>
+<script src="../JS/Ease.js"></script>
+<script src="../JS/animate-scroll.js"></script>
 <script type="text/javascript">
 	$(document).animateScroll();
 </script>

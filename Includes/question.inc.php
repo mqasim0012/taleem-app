@@ -20,7 +20,7 @@ if (isset($_POST['submit-question']) && isset($_POST['user-name'])) {
         header('Location: ../Discussion/Discussion_bounds.php?error=emptyfield');
         exit();
     } else {
-        $sql = "INSERT INTO questions (q_uid, q_sub, q_question, q_details) VALUES (?, ?, ?, ?);";
+        $sql = "INSERT INTO questions (q_user, q_sub, q_question, q_details) VALUES (?, ?, ?, ?);";
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {

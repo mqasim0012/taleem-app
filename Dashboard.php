@@ -23,7 +23,7 @@
 		  'opacity': '0',
 		  'reverse': 'false'
 		  }'>
-				<img src='SUBJECTS/Subs/".$img."'>
+				<img src='SUBJECTS/Subs/".$img.".jpg'>
 			</div>
 			<div class='details'>
 				<div class='content'>
