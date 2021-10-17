@@ -21,7 +21,7 @@
 <header>
 	<div class = "main">
 	<div class = "logo">
-		<img src = "Images/logo.png" />
+		<img src = "logo.png" />
 	</div>
 	<a class = 'menu-icon'><img src="Images/menu.png" alt=""></a>
 	<ul>

@@ -46,13 +46,14 @@
 	  "duration": "1.5",
 	  "opacity": "0",
 	  "reverse": "false"
-      }'>TALEEM</h1>
+      }'>TALEEM</h1><br>
 				<?php
 				if (isset($_SESSION['userId'])) {
 					echo '<p id = "welcome">Welcome '.$_SESSION['username'].'!</p><br />';
-					echo '<a href = "account-settings.php" class = "loggedin">Account Settings</a>';
+					echo '<a href = "account-settings.php" class = "loggedin">Account Settings</a><br><br>';
 				}
 				?>
+				<p>*This is a non-commercial student project.<br> Taleem means 'education' in urdu,<br> if it matches the name of any organizations,<br> it's purely coincidental.</p>
 			</div>
 		</div>
 	</header>

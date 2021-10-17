@@ -101,6 +101,7 @@ header ul li a:hover {
 .title {
 	position: absolute;
 	top: 30vh;
+	margin-right: 30vw;
 	/* transform: translate(0, 300%); */
 	color: #FFF;
 }

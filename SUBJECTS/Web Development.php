@@ -24,7 +24,7 @@
 <header>
 	<div class = "main">
 	<div class = "logo">
-		<img src = "../Images/logo.png" />
+		<img src = "../logo.png" />
 	</div>
 	<ul>
 		<li class = "cool-link"><a href = "../index.php" class = "home">Home</a></li>
