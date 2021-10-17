@@ -404,6 +404,30 @@ footer {
   border: 1px solid #031549;
 }
 
+.post-reply textarea {
+  min-width: 40%;
+  max-width: 80%;
+  min-height: 50px;
+  max-height: 200px;
+  outline:none !important;
+  resize:none;
+  border:1px solid rgba(1,1,1,0.3);
+}
+
+.post-reply button {
+  width: 15%;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-bottom: 4px;
+}
+
+.post-reply button:hover {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 .qcontainer .question button {
   width: 30%;
   height: 35px;

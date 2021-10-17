@@ -90,27 +90,33 @@
                 $resultCheck1 = mysqli_num_rows($result1);
 
                 $num = $num + 1;
-                echo "<div class = 'q-footer'>
-                    <a id = 'first'><u>Reply</u></a>
-                    <a id = 'toggle-replies' onclick = 'reveal".$num."Replies()'><u>View replies (".$resultCheck1.")</u></a>
+                echo "  <div class = 'q-footer'>
+                            <a id = 'first' onclick = 'reveal".$num."Replies()'><u>Reply</u></a>
+                            <a id = 'toggle-replies' onclick = 'reveal".$num."Replies()'><u>View replies (".$resultCheck1.")</u></a>
                 </div>";
-                
-                if ($resultCheck1 > 0) {
-                    echo "<div class = 'r_container' id = 'r_num".$num."'>";
-                    while ($row1 = mysqli_fetch_assoc($result1)) {
-                        echo "
-                        <p id = 'r_content'><span id = 'r_uid'><u>".$row1['r_user']."</u></span><br><span id = 'r_text'>".$row1['r_text']."</span></p><br>";
-                    }
-                    echo "<script>";
-                    echo "function reveal".$num."Replies() {
-                        $('#r_num".$num."').toggle();
-                    }
+                echo "<div class = 'r_container' id = 'r_num".$num."'>";
+                    echo "
+                    <script>
+                        function reveal".$num."Replies() {
+                            $('#r_num".$num."').toggle();
+                        }
                     </script>
-                    <form action='../Includes/post-reply.inc.php' method = 'post'>
-                        <textarea name='r_text' id='rtext'></textarea>
-                    </form></div>";
+                    <form action='../Includes/post-reply.inc.php' method='post' class='post-reply'>
+                        <textarea name='rtext' id='rtext'></textarea><br>
+                        <input type='hidden' value='".$id."' name='parent-id' />
+                        <input type='hidden' value='".$_SESSION['username']."' name='reply-user-id' />
+                        <button type = 'submit' name = 'submit-reply'>Post</button>
+                    </form>";
+                    if ($resultCheck1 > 0) {
+                        while ($row1 = mysqli_fetch_assoc($result1)) {
+                            echo 
+                            "<p id = 'r_content'><span id = 'r_uid'>
+                                <u>".$row1['r_user']."</u>
+                                </span><br><span id = 'r_text'>".$row1['r_text']."</span>
+                            </p><br>";
+                    }
                 }
-                echo "</div>";
+                echo "</div></div>";
             }
         }
     ?>
