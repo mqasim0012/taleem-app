@@ -28,8 +28,8 @@
 			<a class = 'menu-icon'><img src="Images/menu.png" alt=""></a>
 			<ul>
 				<li><a href = "#" class = "active">Home</a></li>
-				<li><a href = "Dashboard.php">Dashboard</a></li>
-				<li><a href = "Discussion/Discussion_bounds.php">Discussion</a></li>
+				<li><a href = "./Dashboard.php">Dashboard</a></li>
+				<li><a href = "./Discussion/Discussion_bounds.php">Discussion</a></li>
 				<?php
 				if (isset($_SESSION['userId'])) {
 					echo '<li><form action = "Includes/logout.inc.php" method = "post"><a class = \'logout\' href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
