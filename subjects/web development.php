@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include '../Includes/dbh.inc.php';
+    include '../includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,15 +10,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Taleem</title>
-	<link rel = "shortcut icon" href = "../Images/icon.ico" />
+	<link rel = "shortcut icon" href = "../images/icon.ico" />
 
-	<link href = "../CSS/resetstyle.css" type = "text/css" rel = "stylesheet">
-	<link rel="stylesheet" href="../CSS/swiper.min.css">
-	<link href = "../CSS/Subject_bounds.css" type = "text/css" rel = "stylesheet">
+	<link href = "../css/resetstyle.css" type = "text/css" rel = "stylesheet">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link href = "../css/subject_bounds.css" type = "text/css" rel = "stylesheet">
 	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 	
 	<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
-	<script src = '../JS/revealSubTop.js'></script>
 </head>
 <body>
 <header>
@@ -28,11 +27,11 @@
 	</div>
 	<ul>
 		<li class = "cool-link"><a href = "../index.php" class = "home">Home</a></li>
-		<li class = "cool-link"><a href = "../Dashboard.php" class = "active">Dashboard</a></li>
-		<li class = "cool-link"><a href = "../Discussion/Discussion_bounds.php" class = "discussion">Discussion</a></li>
+		<li class = "cool-link"><a href = "../dashboard.php" class = "active">Dashboard</a></li>
+		<li class = "cool-link"><a href = "../discussion/discussion_bounds.php" class = "discussion">Discussion</a></li>
 		<?php
 		if (isset($_SESSION['userId'])) {
-			echo '<li class = "cool-link"><form action = "../Includes/logout.inc.php" method = "post"><a href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
+			echo '<li class = "cool-link"><form action = "../includes/logout.inc.php" method = "post"><a href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
 		} else {
 			echo '<li class = "cool-link"><a href = "../index.php#login" class = "login">Log-In/Sign-Up</a></li>';
 		}
@@ -60,7 +59,7 @@
 				<h6 class = "heading"><strong>HTML</strong></h6>
 				<div class = 'topic-grid'>
 					<div class = 'topic-info'>
-					<img alt="" src="Topics/WebDev/HTML/html.png" data-animate-scroll='{
+					<img alt="" src="topics/webdev/html/html.png" data-animate-scroll='{
 	  "x": "0%",
 	  "y": "-50%",  
       "alpha": "0",  
@@ -93,7 +92,7 @@
 				<h6 class = "heading"><strong>CSS</strong></h6>
 				<div class = 'topic-grid'>
 					<div class = 'topic-info'>
-						<img alt="" src="Topics/WebDev/CSS/css.png" data-animate-scroll='{
+						<img alt="" src="topics/webdev/css/css.png" data-animate-scroll='{
 	  "x": "0%",
 	  "y": "-50%",  
       "alpha": "0",  
@@ -131,7 +130,7 @@
 	<div class="swiper-button-next"></div>
 </div>
 
-<script src = "../JS/swiper.min.js"></script>
+<script src = "../js/swiper.min.js"></script>
 
 <script>
     var swiper = new Swiper('.swiper-container', {
@@ -245,7 +244,6 @@ function revealStyling() {
 </script>
 
 <script src = 'https://code.jquery.com/jquery-3.3.1.js'></script>
-<script src = '../JS/SubjectJS.js'></script>
 
 <footer>
 	<p>&copy; Taleem | taleem@gmail.org</p>
@@ -257,10 +255,10 @@ function revealStyling() {
 </footer>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-<script src="../JS/Max.js"></script>
-<script src="../JS/ScrollTo.js"></script>
-<script src="../JS/Ease.js"></script>
-<script src="../JS/animate-scroll.js"></script>
+<script src="../js/Max.js"></script>
+<script src="../js/ScrollTo.js"></script>
+<script src="../js/Ease.js"></script>
+<script src="../js/animate-scroll.js"></script>
 <script type="text/javascript">
 	$(document).animateScroll();
 </script>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include '../Includes/dbh.inc.php';
+    include '../includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,14 +10,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Taleem | Forum</title>
-    <link rel = "shortcut icon" href = "../Images/icon.ico" />
+    <link rel = "shortcut icon" href = "../images/icon.ico" />
     
-	<link href = "../CSS/resetstyle.css" type = "text/css" rel = "stylesheet">
-    <link href = "../CSS/Discussion.css" type = "text/css" rel = "stylesheet">
+	<link href = "../css/resetstyle.css" type = "text/css" rel = "stylesheet">
+    <link href = "../css/discussion.css" type = "text/css" rel = "stylesheet">
     <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
     
 	<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
-	<script src = "../JS/Discussion.js"></script> 
+	<script src = "../js/discussion.js"></script> 
 </head>
 <body>
 <header>
@@ -25,14 +25,14 @@
 	<div class = "logo">
 		<img src = "../logo.png" />
 	</div>
-	<a class = 'menu-icon'><img src="../Images/menu.png" alt=""></a>
+	<a class = 'menu-icon'><img src="../images/menu.png" alt=""></a>
 	<ul>
 		<li class = "cool-link"><a href = "../index.php" class = "home">Home</a></li>
-		<li class = "cool-link"><a href = "../Dashboard.php">Dashboard</a></li>
-		<li class = "cool-link"><a href = "Discussion_bounds.php" class = "active">Discussion</a></li>
+		<li class = "cool-link"><a href = "../dashboard.php">Dashboard</a></li>
+		<li class = "cool-link"><a href = "discussion_bounds.php" class = "active">Discussion</a></li>
 		<?php
 		if (isset($_SESSION['userId'])) {
-			echo '<li class = "cool-link"><form action = "../Includes/logout.inc.php" method = "post"><a href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
+			echo '<li class = "cool-link"><form action = "../includes/logout.inc.php" method = "post"><a href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
 		} else {
 			echo '<li class = "cool-link"><a href = "../index.php#login" class = "login">Log-In/Sign-Up</a></li>';
 		}
@@ -43,7 +43,7 @@
 
 <div class="main-body">
 <?php
-    include 'Discussion.php';
+    include 'discussion.php';
 ?>
 </div>
 
@@ -57,10 +57,10 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-<script src="../JS/Max.js"></script>
-<script src="../JS/ScrollTo.js"></script>
-<script src="../JS/Ease.js"></script>
-<script src="../JS/animate-scroll.js"></script>
+<script src="../js/Max.js"></script>
+<script src="../js/ScrollTo.js"></script>
+<script src="../js/Ease.js"></script>
+<script src="../js/animate-scroll.js"></script>
 <script type="text/javascript">
 	$(document).animateScroll();
 </script>

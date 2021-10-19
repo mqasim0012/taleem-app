@@ -5,7 +5,7 @@ $(document).ready(function() {
     let subjectCount = 6;
     $(".trigger").click(function() {
         subjectCount = subjectCount + 6;
-        $(".subject-container").load("Includes/load-subs.inc.php", {
+        $(".subject-container").load("includes/load-subs.inc.php", {
             subjectNewCount: subjectCount
         });
     });

@@ -42,7 +42,7 @@
     $sql = "SELECT * FROM subjects";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
-    echo "<form action='../Includes/question.inc.php' method = 'post'>
+    echo "<form action='../includes/question.inc.php' method = 'post'>
             <input type='hidden' name = 'user-name' value = '".$username."'>
             <p>Subject</p>
             <select size = 1 name = 'sub'>";
@@ -60,7 +60,7 @@
           <button type = 'submit' name = 'submit-question'>Post</button>
           </form></div>";
     } else {
-    echo "<p>Please <a id = 'qtologin' href = '../index.php#login'><u>log in</u></a> to your jt taleem account to create a post.</p>";
+    echo "<p>Please <a id = 'qtologin' href = '../index.php#login'><u>log in</u></a> to your jt taleem account to create a post.</p><br><p></p>You may reply to other posts without logging in</p>";
     }
     ?>
 </div>
@@ -101,8 +101,8 @@
                             $('#r_num".$num."').toggle();
                         }
                     </script>
-                    <form action='../Includes/post-reply.inc.php' method='post' class='post-reply'>
-                        <textarea name='rtext' id='rtext'></textarea><br>
+                    <form action='../includes/post-reply.inc.php' method='post' class='post-reply'>
+                        <textarea name='rtext' id='rtext' placeholder='Write a reply!'></textarea><br>
                         <input type='hidden' value='".$id."' name='parent-id' />
                         <input type='hidden' value='".$_SESSION['username']."' name='reply-user-id' />
                         <button type = 'submit' name = 'submit-reply'>Post</button>

@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     $(".trigger").click(function() {
         questionCount = questionCount + 8;
-        $(".qoftcontainer").load("../Includes/load-questions.inc.php", {
+        $(".qoftcontainer").load("../includes/load-questions.inc.php", {
             questionNewCount: questionCount
         });
     });

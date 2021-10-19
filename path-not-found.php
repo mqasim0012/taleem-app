@@ -9,8 +9,8 @@
 
 
 	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-	<link href = "CSS/resetstyle.css" type = "text/css" rel = "stylesheet">
-	<link href = "CSS/MainCSS.css" type = "text/css" rel = "stylesheet">
+	<link href = "css/resetstyle.css" type = "text/css" rel = "stylesheet">
+	<link href = "css/main.css" type = "text/css" rel = "stylesheet">
     <style>
         body {
             width: 100%;
@@ -23,10 +23,10 @@
         }
     </style>
 	<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
-	<script src = "JS/MainJS.js"></script>
+	<script src = "js/main.js"></script>
 </head>
 <body>
-    <div style="text-align: center">
+    <div style="text-align: center; font-size: 30px;">
         <h1>The requested page could not be found</h1><br>
         <h3>It may be under development or may not exist</h3>
     </div>

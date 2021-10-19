@@ -17,21 +17,21 @@ if (isset($_POST['submit-question']) && isset($_POST['user-name'])) {
     $details = str_replace('\\"', '"', $details);
 
     if (empty($username) || empty($subject) || empty($question)) {
-        header('Location: ../Discussion/Discussion_bounds.php?error=emptyfield');
+        header('Location: ../discussion/discussion_bounds.php?error=emptyfield');
         exit();
     } else {
         $sql = "INSERT INTO questions (q_user, q_sub, q_question, q_details) VALUES (?, ?, ?, ?);";
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header('Location: ../Discussion/Discussion_bounds.php?error=sql');
+            header('Location: ../discussion/discussion_bounds.php?error=sql');
             exit();
         } else {
             mysqli_stmt_bind_param($stmt, "ssss", $username, $subject, $question, $details);
             mysqli_stmt_execute($stmt);
         }
     }
-    header("Location: ../Discussion/Discussion_bounds.php?submission=success");
+    header("Location: ../discussion/discussion_bounds.php?submission=success");
 } else {
-    header("Location: ../Discussion/Discussion_bounds.php");
+    header("Location: ../discussion/discussion_bounds.php");
 }

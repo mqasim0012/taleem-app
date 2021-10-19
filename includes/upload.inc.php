@@ -65,5 +65,5 @@ if (isset($_POST['file-submit'])) {
     }
 
 } else {
-    header('Location: ../Subject.php');
+    header('Location: ../subject.php');
 }

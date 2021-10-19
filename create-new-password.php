@@ -6,23 +6,22 @@
 <head>
     <title>JT TALEEM | NEW PASSWORD FROM RECOVERY</title>
 	<link rel = "shortcut icon" href = "Images/icon.ico" />
-	<link href = "CSS/resetstyle.css" type = "text/css" rel = "stylesheet">
-    <link href = "CSS/create-new-passwordCSS.css" type = "text/css" rel = "stylesheet">
+	<link href = "css/resetstyle.css" type = "text/css" rel = "stylesheet">
+    <link href = "css/create-new-passwordCSS.css" type = "text/css" rel = "stylesheet">
 	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 	<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
-	<!--<script src = "JS/create-new-passwordJS.js"></script>-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
 		<div class = "main">
 			<div class = "logo">
-				<img src = "Images/logo.png" />
+				<img src = "images/logo.png" />
 			</div>
 			<ul>
 				<li><a href = "index.php">Home</a></li>
-                <li><a href = "#!">Dashboard</a></li>
-				<li><a href = "#!" class = "contact">Contact</a></li>
+                <li><a href = "dashboard.php">Dashboard</a></li>
+				<li><a href = "discussion/discussion_bounds.php" class = "contact">Contact</a></li>
 				<?php
 				if (isset($_SESSION['userId'])) {
 					echo '<li><form action = "includes/logout.inc.php" method = "post"><a href = "#!"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
@@ -49,7 +48,7 @@
 			} else {
 				if (ctype_xdigit($selector) !== false && ctype_xdigit($validator) !== false) {
 				?>
-        		<form action = "Includes/reset-password.inc.php" method = "post">
+        		<form action = "includes/reset-password.inc.php" method = "post">
             		<ul>
 						<li><input type = "hidden" name = "selector" value = "<?php echo $selector; ?>"></li>
 						<li><input type = "hidden" name = "validator" value = "<?php echo $validaor; ?>"></li>

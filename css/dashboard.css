@@ -92,7 +92,7 @@ header ul li a.active {
 	display: flex;
   justify-content: center;
   position: fixed;
-  background-image: url(../Images/homepage-background.jpg);
+  background-image: url(../images/homepage-background.jpg);
   width: 100%;
   height: auto;
   background-size: cover;
@@ -103,7 +103,7 @@ header ul li a.active {
 
 footer {
 	height: auto;
-  background-image: url(../Images/homepage-background.jpg);
+  background-image: url(../images/homepage-background.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -128,7 +128,7 @@ footer {
     font-style: bold;
     text-transform: uppercase;
     color: transparent;
-    background-image: url(../Images/homepage-background.jpg);
+    background-image: url(../images/homepage-background.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -146,7 +146,7 @@ footer {
 }
 
 .search button {
-  background-image: url(../Images/homepage-background.jpg);
+  background-image: url(../images/homepage-background.jpg);
   background-attachment: fixed;
   color: #FFF;
   background-position: center;
@@ -154,7 +154,7 @@ footer {
 }
 
 .search button:hover, .subject a:hover {
-  background-image: url(../Images/homepage-background-1.jpg);
+  background-image: url(../images/homepage-background-1.jpg);
   background-attachment: fixed;
 }
 
@@ -163,7 +163,7 @@ footer {
 }
 
 .subject a {
-    background-image: url(../Images/homepage-background.jpg);
+    background-image: url(../images/homepage-background.jpg);
     background-attachment: fixed;
     background-position: center;
     color: #FFF;

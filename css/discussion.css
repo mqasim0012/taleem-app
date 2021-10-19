@@ -92,7 +92,7 @@ header ul li button:hover {
 	display: flex;
   justify-content: center;
   position: fixed;
-  background-image: url(../Images/homepage-background.jpg);
+  background-image: url(../images/homepage-background.jpg);
   width: 100%;
   height: auto;
   background-size: cover;
@@ -103,7 +103,7 @@ header ul li button:hover {
 
 footer {
 	height: auto;
-  background-image: url(../Images/homepage-background.jpg);
+  background-image: url(../images/homepage-background.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

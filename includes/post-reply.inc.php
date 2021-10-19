@@ -13,9 +13,12 @@ if (
     $reply  = mysqli_real_escape_string($conn, $_POST['rtext']);
     $parent = $_POST['parent-id'];
     $replyUser = $_POST['reply-user-id'];
+    if (empty($replyUser)) {
+        $replyUser = "Anonymous";
+    }
 
     if (empty($reply) || empty($parent)) {
-        header('Location: ../Discussion/Discussion_bounds.php?error=emptyreplyfield');
+        header('Location: ../discussion/discussion_bounds.php?error=emptyreplyfield');
         exit();
     } else {
         $sql = "INSERT INTO replies (parent_id, r_user, r_text)
@@ -23,15 +26,15 @@ if (
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header('Location: ../Discussion/Discussion_bounds.php?error=sql');
+            header('Location: ../discussion/discussion_bounds.php?error=sql');
             exit();
         } else {
             mysqli_stmt_bind_param($stmt, "iss", $parent, $replyUser, $reply);
             mysqli_stmt_execute($stmt);
         }
     }
-    header("Location: ../Discussion/Discussion_bounds.php?reply-submission=success");
+    header("Location: ../discussion/discussion_bounds.php?reply-submission=success");
 } else {
-    header("Location: ../Discussion/Discussion_bounds.php");
+    header("Location: ../discussion/discussion_bounds.php");
 }
 ?>

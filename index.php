@@ -8,16 +8,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel = "shortcut icon" href = "Images/icon.ico" />
+	<link rel = "shortcut icon" href = "images/icon.ico" />
 	<title>Taleem</title>
 
 
 	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-	<link href = "CSS/resetstyle.css" type = "text/css" rel = "stylesheet">
-	<link href = "CSS/MainCSS.css" type = "text/css" rel = "stylesheet">
+	<link href = "css/resetstyle.css" type = "text/css" rel = "stylesheet">
+	<link href = "css/main.css" type = "text/css" rel = "stylesheet">
 
 	<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
-	<script src = "JS/MainJS.js"></script>
+	<script src = "js/main.js"></script>
 </head>
 <body>
 	<header>
@@ -25,14 +25,14 @@
 			<div class = "logo">
 				<img src = "logo.png" />
 			</div>
-			<a class = 'menu-icon'><img src="Images/menu.png" alt=""></a>
+			<a class = 'menu-icon'><img src="images/menu.png" alt=""></a>
 			<ul>
 				<li><a href = "#" class = "active">Home</a></li>
-				<li><a href = "./Dashboard.php">Dashboard</a></li>
-				<li><a href = "./Discussion/Discussion_bounds.php">Discussion</a></li>
+				<li><a href = "./dashboard.php">Dashboard</a></li>
+				<li><a href = "./discussion/discussion_bounds.php">Discussion</a></li>
 				<?php
 				if (isset($_SESSION['userId'])) {
-					echo '<li><form action = "Includes/logout.inc.php" method = "post"><a class = \'logout\' href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
+					echo '<li><form action = "includes/logout.inc.php" method = "post"><a class = \'logout\' href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';
 				} else {
 					echo '<li><a class = "login">Log-In/Sign-Up</a></li>';
 				}
@@ -108,7 +108,7 @@
 				"opacity": "0",
 				"reverse": "false"
 				}'>Log In</h2>
-			<form action = "Includes/login.inc.php" method = "post">
+			<form action = "includes/login.inc.php" method = "post">
 				<ul>
 					<li><input type = "text" name = "mailuid" placeholder = "Email"></li>
 					<li><input type = "password" name = "pwd" placeholder = "Password"></li>
@@ -186,7 +186,7 @@
 			"opacity": "0",
 			"reverse": "false"
 			}'>Sign Up</h2>
-			<form action = "Includes/signup.inc.php" method = "post">
+			<form action = "includes/signup.inc.php" method = "post">
 				<ul>
 					<li><input type = "text" name = "uid" placeholder = "Username | No Spaces"></li>
 					<li><input type = "text" name = "mail" placeholder = "Email"></li>
@@ -213,10 +213,10 @@
 	<!-- End footer -->
 
 	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-	<script src="JS/Max.js"></script>
-	<script src="JS/ScrollTo.js"></script>
-	<script src="JS/Ease.js"></script>
-	<script src="JS/animate-scroll.js"></script>
+	<script src="js/Max.js"></script>
+	<script src="js/ScrollTo.js"></script>
+	<script src="js/Ease.js"></script>
+	<script src="js/animate-scroll.js"></script>
 	<script type="text/javascript">
 		$(document).animateScroll();
 	</script>

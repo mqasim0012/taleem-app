@@ -1,5 +1,5 @@
 <?php
-    include 'Dashboard_header.php';
+    include 'dashboard_header.php';
 ?>
 
 <div class="subject-container">
@@ -13,7 +13,7 @@
 			$subject = $row['s_sub'];
 			$img = $row['s_img'];
 			echo "<div class='box'>
-			<a href = 'SUBJECTS/".$subject.".php'><div class='imgBox' data-animate-scroll='{
+			<a href = 'subjects/".strtolower($subject).".php'><div class='imgBox' data-animate-scroll='{
 		  'x': '0%',
 		  'y': '0%',  
 		  'scaleY': '0.5',
@@ -23,7 +23,7 @@
 		  'opacity': '0',
 		  'reverse': 'false'
 		  }'>
-				<img src='SUBJECTS/Subs/".$img.".jpg'>
+				<img src='subjects/subs/".strtolower($img).".jpg'>
 			</div>
 			<div class='details'>
 				<div class='content'>
@@ -41,5 +41,5 @@
 </div>
 
 <?php
-    include "Dashboard_footer.php"
+    include "dashboard_footer.php"
 ?>

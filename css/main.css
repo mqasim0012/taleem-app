@@ -15,7 +15,7 @@ button {
 }
 
 header {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/homepage-background.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/homepage-background.jpg);
 	height: 90vh;
 	background-size: cover;
 	background-position: center;
@@ -228,7 +228,7 @@ header ul li a:hover {
 
 footer {
 	height: auto;
-	background-image: url(../Images/homepage-background.jpg);
+	background-image: url(../images/homepage-background.jpg);
     background-position: center;
 	background-size: cover;
 	background-attachment: fixed;

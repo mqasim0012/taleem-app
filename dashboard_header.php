@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'Includes/dbh.inc.php';
+    include 'includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,11 +11,11 @@
 
 	<title>Taleem | Dashboard</title>
 	<link rel = "shortcut icon" href = "Images/icon.ico" />
-	<link href = "CSS/resetstyle.css" type = "text/css" rel = "stylesheet">
-	<link href = "CSS/DashboardCSS.css" type = "text/css" rel = "stylesheet">
+	<link href = "css/resetstyle.css" type = "text/css" rel = "stylesheet">
+	<link href = "css/dashboard.css" type = "text/css" rel = "stylesheet">
 	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 	<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
-	<script src = "JS/DashboardJS.js"></script>
+	<script src = "js/dashboard.js"></script>
 </head>
 <body>
 <header>
@@ -23,11 +23,11 @@
 	<div class = "logo">
 		<img src = "logo.png" />
 	</div>
-	<a class = 'menu-icon'><img src="Images/menu.png" alt=""></a>
+	<a class = 'menu-icon'><img src="images/menu.png" alt=""></a>
 	<ul>
 		<li class = "cool-link"><a href = "index.php" class = "home">Home</a></li>
-		<li class = "cool-link"><a href = "Dashboard.php" class = "active">Dashboard</a></li>
-		<li class = "cool-link"><a href = "Discussion/Discussion_bounds.php" class = "discussion">Discussion</a></li>
+		<li class = "cool-link"><a href = "dashboard.php" class = "active">Dashboard</a></li>
+		<li class = "cool-link"><a href = "discussion/discussion_bounds.php" class = "discussion">Discussion</a></li>
 		<?php
 		if (isset($_SESSION['userId'])) {
 			echo '<li class = "cool-link"><form action = "includes/logout.inc.php" method = "post"><a href = "#"><button type = "submit" name = "logout-submit">Log Out</button></a></form></li>';

@@ -32,7 +32,7 @@ li {
 }
   
 header {
-    background-image: url(../Images/homepage-background.jpg);
+    background-image: url(../images/homepage-background.jpg);
     height: auto;
     background-position: center;
 }
@@ -99,7 +99,7 @@ header ul li a:hover {
     text-transform: capitalize;
     padding: 5% 0;
     color: transparent;
-    background-image: url(../Images/homepage-background.jpg);
+    background-image: url(../images/homepage-background.jpg);
     background-position: center;
     background-size: cover;
     background-clip: text;
@@ -108,7 +108,7 @@ header ul li a:hover {
 
 footer {
     height: auto;
-    background-image: url(../Images/homepage-background.jpg);
+    background-image: url(../images/homepage-background.jpg);
     background-position: center;
     background-size: cover;
     color: #FFF;
