@@ -1,1 +1,7 @@
-{}
+{
+    "files": [
+        "dashboard.php",
+        "dashboard_header.php",
+        "dashboard_footer.php"
+    ]
+}
