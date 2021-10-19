@@ -1,7 +1,21 @@
-{
-    "files": [
-        "dashboard.php",
-        "dashboard_header.php",
-        "dashboard_footer.php"
-    ]
+{   
+    "name": "taleem/composer",
+    "description": "Full-stack web Application project",
+    "authors": [
+        {
+            "name": "Muhammad Qasim",
+            "email": "qasimsaleem012@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "dashboard.php",
+            "dashboard_header.php",
+            "dashboard_footer.php"
+        ],
+        "classmap": [],
+        "psr-4": {
+            "acme\\foo\\": "./"
+        }
+    }
 }
