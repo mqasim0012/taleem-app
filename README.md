@@ -7,7 +7,9 @@ Idea:
 The website is live at: http://taleem-application.herokuapp.com/ for viewing.
  
 HOW TO RUN:
+
 Install: php, mysql, phpMyAdmin, Apache service unless available.
+
 Perform the following on a terminal:
 
   git clone git@github.com:mqasim0012/taleem-app.git
